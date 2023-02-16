@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\MainController;
 
+use App\Http\Controllers\ApiController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,24 +22,24 @@ Route::get('/', [MainController::class, 'home'])
     ->name('home');
 
 
-    // show
+// show
 Route::get('/movies', [MainController::class, 'movies'])
     ->name('movies');
 
-    // delete
+// delete
 Route::get('/delete/movie/{movie}', [MainController::class, 'delete'])
-->name('delete.movie');
+    ->name('delete.movie');
 
-    // create
+// create
 Route::get('/create/movie', [MainController::class, 'create'])
     ->name('create.movie');
-    Route::post('/store/movie', [MainController::class, 'store'])
+Route::post('/store/movie', [MainController::class, 'store'])
     ->name('store.movie');
 
-    // edit
+// edit
 Route::get('/edit/movie/{movie}', [MainController::class, 'edit'])
-->name('edit.movie');
+    ->name('edit.movie');
 Route::post('/update/movie/{movie}', [MainController::class, 'update'])
-->name('update.movie');
+    ->name('update.movie');
 
 Route::get('/api/movies', [ApiController::class, "movies"])->name("api.movies");
