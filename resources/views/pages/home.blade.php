@@ -1,8 +1,12 @@
 @extends('layouts.main-layout')
 
 @section('content')
-    
-<div class="ms_container">
+
+    <a href="{{ route('movies') }}" class="btn btn-danger">
+        <i class="fa-solid fa-rectangle-list"></i>
+        All Movie
+    </a>
+
     @foreach ($genres as $genre)
 
     <div class="card my-5">
@@ -32,5 +36,4 @@
 
     </div>
     @endforeach
-    </div>
 @endsection
