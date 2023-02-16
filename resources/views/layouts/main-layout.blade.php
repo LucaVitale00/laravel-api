@@ -20,8 +20,5 @@
         @yield('content')    
     </div>
 
-    {{-- footer --}}
-    @include('components.footer')
-
 </body>
 </html>
